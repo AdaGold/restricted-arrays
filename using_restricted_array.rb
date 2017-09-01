@@ -94,7 +94,7 @@ puts "---Test 3: Linear Search --"
 # search for value_to_find in the array
 value_to_find = 120
 middle_index = another_array_length/2
-array[middle_index] = value_to_find
+another_array[middle_index] = value_to_find
 print "Printing values in the array after inserting #{value_to_find} at #{middle_index}: "
 print_array(another_array)
 if search(another_array, another_array_length, value_to_find)
@@ -123,7 +123,7 @@ puts
 puts "---Test 5: Find smallest --"
 # print the smallest value in the array
 smallest = find_smallest(another_array, another_array_length)
-puts "The smallest value in the array is #{largest}"
+puts "The smallest value in the array is #{smallest}"
 puts
 
 puts "---Test 6: Reverse array --"
