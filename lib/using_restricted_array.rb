@@ -90,7 +90,7 @@ def binary_search(array, length, value_to_find)
     if array[mid] == value_to_find
       return true
     elsif value_to_find > array[mid]
-      low = mid
+      low = mid + 1
     elsif value_to_find < array[mid]
       high = mid - 1
     end

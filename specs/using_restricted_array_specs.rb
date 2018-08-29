@@ -8,7 +8,9 @@ describe "restricted array" do
   it "length method" do
     size = 5
     my_integer_array = RestrictedArray.new(size)
+
     my_integer_array_length = length(my_integer_array)
+
     my_integer_array_length.must_equal size
   end
 
