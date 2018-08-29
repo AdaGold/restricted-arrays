@@ -2,26 +2,26 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/restricted_array'
 require_relative '../lib/using_restricted_array'
+require 'pry'
 
 describe "restricted array" do
   it "length method" do
     size = 5
     my_integer_array = RestrictedArray.new(size)
-
     my_integer_array_length = length(my_integer_array)
-
     my_integer_array_length.must_equal size
   end
 
-  it "linear search method - value exists in the middle, in the array" do
-    size = 9
-    my_integer_array = RestrictedArray.new(size)
-    value_to_find = 120
-    middle_index = size / 2
-    my_integer_array[middle_index] = value_to_find
 
-    search(my_integer_array, size, value_to_find).must_equal true
-  end
+it "linear search method - value exists in the middle, in the array" do
+  size = 9
+  my_integer_array = RestrictedArray.new(size)
+  value_to_find = 120
+  middle_index = size / 2
+  my_integer_array[middle_index] = value_to_find
+
+  search(my_integer_array, size, value_to_find).must_equal true
+end
 
   it "linear search method - value exists at the last index in the array" do
     size = 7
@@ -96,9 +96,11 @@ describe "restricted array" do
     test_array.reverse!
 
     reverse(my_integer_array, size)
+    #binding.pry
 
     length(my_integer_array).must_equal size
     size.times do |i|
+      #binding.pry
       my_integer_array[i].must_equal test_array[i]
     end
   end
