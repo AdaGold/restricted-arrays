@@ -85,8 +85,8 @@ end
 def binary_search(array, length, value_to_find)
   low = 0
   high = length - 1
-  until (high - low) == 0
-    mid = high - low
+  mid = (low + high) / 2
+  while low < high
     if array[mid] == value_to_find
       return true
     elsif value_to_find > array[mid]
@@ -94,7 +94,9 @@ def binary_search(array, length, value_to_find)
     elsif value_to_find < array[mid]
       high = mid - 1
     end
+    mid = (low + high) / 2
   end
+  return true if array[low] == value_to_find
   return false
 end
 
@@ -123,3 +125,14 @@ def sort(array, length)
   end
 end
 ## --- END OF METHODS ---
+
+
+size = 15
+my_integer_array = RestrictedArray.new(size)
+size.times do |i|
+  my_integer_array[i] = i * 10
+end
+value_to_find = size * 10
+
+
+binary_search(my_integer_array, size, value_to_find)
