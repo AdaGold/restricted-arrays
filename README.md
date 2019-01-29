@@ -20,3 +20,5 @@ Implement the methods in using_restricted_array.rb. Methods to implement are:
              Note: Assume that the array is sorted in ascending order.
 - *find_largest* - Finds and returns the largest value element in the integer array.
 - *find_smallest* - Finds and returns the smallest value element in the integer array.
+
+For each method, add a comment above it to explain the time complexity and the space complexity of each method.
