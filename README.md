@@ -9,7 +9,12 @@ RestrictedArray allows you to:
 None of the other methods available in the Ruby Array class are available in the RestrictedArray class.
 
 ## Exercise
-Implement the methods in using_restricted_array.rb. Methods to implement are:
+Implement each of the methods in using_restricted_array.rb.
+Above each method, elaborate the comment to explain the time and space complexity.
+If you define the time and space complexity in terms of *n*, be sure to explain
+what *n* stands for.
+
+Methods to implement are:
 - *length* - which calculates the length of the integer array and returns it.
              Note: The restricted_array is terminated by `nil` i.e. `array[length] = nil`
 - *print_array* - which prints each integer value separated by space on the same line
