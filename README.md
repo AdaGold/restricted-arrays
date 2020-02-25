@@ -8,6 +8,15 @@ RestrictedArray allows you to:
 
 None of the other methods available in the Ruby Array class are available in the RestrictedArray class.
 
+### Note
+
+You can use a RestrictedArray instance just like an Array with square brackets []
+
+```ruby
+list = RestrictedArray.new(10)
+list[3] = 42
+```
+
 ## Exercise
 
 Implement each of the methods in using_restricted_array.rb.
